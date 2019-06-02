@@ -128,7 +128,7 @@ quarterly_report_orgs_names = CASE WHEN gl_master.a_object BETWEEN 311100 AND 31
 	WHEN gl_master.a_object IN (345810, 345831, 345832, 345833, 345834) THEN 'Building Plan Review Fees'
 	WHEN gl_master.a_object IN (345811, 345820, 345850, 345851) THEN 'Mitigation Fees'
 	WHEN gl_master.a_object BETWEEN 347000 AND 347999 THEN 'Recreation Fees'
-	WHEN gl_master.a_object BETWEEN 350000 AND 359999 THEN 'Fines and Penalties'
+	WHEN gl_master.a_charcode = '35' THEN 'Fines and Penalties'
 	WHEN gl_master.a_object BETWEEN 361000 AND 361410 AND NOT gl_master.a_object IN (361402, 361403) THEN 'Investment Income'
 	WHEN gl_master.a_object BETWEEN 362000 AND 362999 THEN 'Rental Income'
 	WHEN gl_master.a_object BETWEEN 367000 AND 393100 AND NOT gl_master.a_object IN (361402, 361403, 368100, 368102) THEN 'Miscellaneous Revenue'
